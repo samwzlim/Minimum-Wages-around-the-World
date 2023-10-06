@@ -100,6 +100,7 @@
           {
             "field": "GDP trillion",
             "type": "quantitative",
+            "format": ".2f",
             "title": "GDP (in trillions)"
           },
           {
@@ -134,6 +135,7 @@
           {
             "field": "GDP trillion",
             "type": "quantitative",
+            "format": ".2f",
             "title": "GDP (in trillions)"
           },
           {
