@@ -1,0 +1,721 @@
+Country,Region,Year,Wage
+Spain,Europe,2000,7.800173539
+Spain,Europe,2001,7.689588343
+Spain,Europe,2002,7.615837313
+Spain,Europe,2003,7.541629057
+Spain,Europe,2004,7.736228284
+Spain,Europe,2005,8.089286287
+Spain,Europe,2006,8.243288478
+Spain,Europe,2007,8.474816809
+Spain,Europe,2008,8.561952256
+Spain,Europe,2009,8.933786336
+Spain,Europe,2010,8.901458647
+Spain,Europe,2011,8.730114236
+Spain,Europe,2012,8.521663455
+Spain,Europe,2013,8.453515115
+Spain,Europe,2014,8.466308965
+Spain,Europe,2015,8.559432334
+Spain,Europe,2016,8.661226186
+Spain,Europe,2017,9.173998527
+Spain,Europe,2018,9.381175988
+Spain,Europe,2019,11.3862329
+Spain,Europe,2020,12.07214115
+Spain,Europe,2021,11.75715447
+Spain,Europe,2022,11.35525391
+France,Europe,2000,11.26024034
+France,Europe,2001,11.48295584
+France,Europe,2002,11.62801984
+France,Europe,2003,11.82771268
+France,Europe,2004,12.22389833
+France,Europe,2005,12.69603104
+France,Europe,2006,13.01379971
+France,Europe,2007,13.15340224
+France,Europe,2008,13.17611956
+France,Europe,2009,13.40922273
+France,Europe,2010,13.31242235
+France,Europe,2011,13.3025925
+France,Europe,2012,13.46710759
+France,Europe,2013,13.5238822
+France,Europe,2014,13.59824928
+France,Europe,2015,13.70725818
+France,Europe,2016,13.76759859
+France,Europe,2017,13.75375783
+France,Europe,2018,13.66985762
+France,Europe,2019,13.7252848
+France,Europe,2020,13.82362616
+France,Europe,2021,13.81
+France,Europe,2022,13.82
+Japan,Asia,2000,6.174587962
+Japan,Asia,2001,6.272503327
+Japan,Asia,2002,6.37486876
+Japan,Asia,2003,6.423241631
+Japan,Asia,2004,6.433992063
+Japan,Asia,2005,6.484983771
+Japan,Asia,2006,6.503963868
+Japan,Asia,2007,6.569526127
+Japan,Asia,2008,6.618886543
+Japan,Asia,2009,6.851146612
+Japan,Asia,2010,7.009295481
+Japan,Asia,2011,7.171166406
+Japan,Asia,2012,7.253934776
+Japan,Asia,2013,7.35427849
+Japan,Asia,2014,7.301796079
+Japan,Asia,2015,7.399821332
+Japan,Asia,2016,7.595780141
+Japan,Asia,2017,7.793495788
+Japan,Asia,2018,7.953485295
+Japan,Asia,2019,8.158201264
+Japan,Asia,2020,8.347163584
+Japan,Asia,2021,8.441677265
+Japan,Asia,2022,8.494396389
+Poland,Europe,2000,3.52247623
+Poland,Europe,2001,3.762555754
+Poland,Europe,2002,3.692208513
+Poland,Europe,2003,3.860181824
+Poland,Europe,2004,3.845894231
+Poland,Europe,2005,3.877892625
+Poland,Europe,2006,4.054188741
+Poland,Europe,2007,4.119752218
+Poland,Europe,2008,4.757863046
+Poland,Europe,2009,5.194528644
+Poland,Europe,2010,5.226556077
+Poland,Europe,2011,5.276684896
+Poland,Europe,2012,5.514366023
+Poland,Europe,2013,5.824215222
+Poland,Europe,2014,6.112136351
+Poland,Europe,2015,6.422953397
+Poland,Europe,2016,6.835418937
+Poland,Europe,2017,7.239357695
+Poland,Europe,2018,7.465971139
+Poland,Europe,2019,7.824955565
+Poland,Europe,2020,8.747005812
+Poland,Europe,2021,8.966588918
+Poland,Europe,2022,8.423603384
+New Zealand,Oceania,2000,7.894435928
+New Zealand,Oceania,2001,7.919605576
+New Zealand,Oceania,2002,7.984636257
+New Zealand,Oceania,2003,8.291763614
+New Zealand,Oceania,2004,8.579533609
+New Zealand,Oceania,2005,8.804871332
+New Zealand,Oceania,2006,9.144137446
+New Zealand,Oceania,2007,9.747115973
+New Zealand,Oceania,2008,10.06633746
+New Zealand,Oceania,2009,10.33355847
+New Zealand,Oceania,2010,10.35396387
+New Zealand,Oceania,2011,10.14914498
+New Zealand,Oceania,2012,10.38418347
+New Zealand,Oceania,2013,10.50559631
+New Zealand,Oceania,2014,10.65869446
+New Zealand,Oceania,2015,11.05843529
+New Zealand,Oceania,2016,11.36294069
+New Zealand,Oceania,2017,11.52514506
+New Zealand,Oceania,2018,11.75026981
+New Zealand,Oceania,2019,12.42718092
+New Zealand,Oceania,2020,13.06030096
+New Zealand,Oceania,2021,13.32845872
+New Zealand,Oceania,2022,13.17397654
+South Korea,Asia,2000,2.973966575
+South Korea,Asia,2001,3.289464292
+South Korea,Asia,2002,3.555250124
+South Korea,Asia,2003,3.744879839
+South Korea,Asia,2004,4.025285035
+South Korea,Asia,2005,4.376432287
+South Korea,Asia,2006,4.533445541
+South Korea,Asia,2007,4.963358242
+South Korea,Asia,2008,5.136879017
+South Korea,Asia,2009,5.304063195
+South Korea,Asia,2010,5.294309993
+South Korea,Asia,2011,5.349454996
+South Korea,Asia,2012,5.55002984
+South Korea,Asia,2013,5.813676834
+South Korea,Asia,2014,6.153908806
+South Korea,Asia,2015,6.544715234
+South Korea,Asia,2016,7.004453573
+South Korea,Asia,2017,7.372217572
+South Korea,Asia,2018,8.455244821
+South Korea,Asia,2019,9.340228789
+South Korea,Asia,2020,9.557340011
+South Korea,Asia,2021,9.465499877
+South Korea,Asia,2022,9.461715398
+Slovenia,Europe,2000,5.311397968
+Slovenia,Europe,2001,5.563786702
+Slovenia,Europe,2002,5.771830997
+Slovenia,Europe,2003,5.961461016
+Slovenia,Europe,2004,6.156990318
+Slovenia,Europe,2005,6.306817423
+Slovenia,Europe,2006,6.361077428
+Slovenia,Europe,2007,6.290444712
+Slovenia,Europe,2008,6.432962661
+Slovenia,Europe,2009,6.617376567
+Slovenia,Europe,2010,7.802723471
+Slovenia,Europe,2011,8.035401162
+Slovenia,Europe,2012,8.013127088
+Slovenia,Europe,2013,8.086707465
+Slovenia,Europe,2014,8.122421259
+Slovenia,Europe,2015,8.18645455
+Slovenia,Europe,2016,8.19095954
+Slovenia,Europe,2017,8.220879091
+Slovenia,Europe,2018,8.460139824
+Slovenia,Europe,2019,8.75742507
+Slovenia,Europe,2020,9.295399367
+Slovenia,Europe,2021,9.931781065
+Slovenia,Europe,2022,9.572825482
+Chile,South America,2000,2.094099086
+Chile,South America,2001,2.17279717
+Chile,South America,2002,2.235401598
+Chile,South America,2003,2.266186939
+Chile,South America,2004,2.329527543
+Chile,South America,2005,2.374217223
+Chile,South America,2006,2.435496666
+Chile,South America,2007,2.479302389
+Chile,South America,2008,2.476699899
+Chile,South America,2009,2.639035339
+Chile,South America,2010,2.706738314
+Chile,South America,2011,2.751351391
+Chile,South America,2012,2.829472234
+Chile,South America,2013,2.966273124
+Chile,South America,2014,3.061490547
+Chile,South America,2015,3.14419303
+Chile,South America,2016,3.317079838
+Chile,South America,2017,3.415731167
+Chile,South America,2018,3.496894644
+Chile,South America,2019,3.639028493
+Chile,South America,2020,3.772756838
+Chile,South America,2021,3.770555732
+Chile,South America,2022,3.703057241
+Czech Republic,Europe,2000,2.854443084
+Czech Republic,Europe,2001,3.452251792
+Czech Republic,Europe,2002,3.828194709
+Czech Republic,Europe,2003,4.162031039
+Czech Republic,Europe,2004,4.346599075
+Czech Republic,Europe,2005,4.579858173
+Czech Republic,Europe,2006,4.876555946
+Czech Republic,Europe,2007,4.914992031
+Czech Republic,Europe,2008,4.62114872
+Czech Republic,Europe,2009,4.574517128
+Czech Republic,Europe,2010,4.508124745
+Czech Republic,Europe,2011,4.423320008
+Czech Republic,Europe,2012,4.282526673
+Czech Republic,Europe,2013,4.309575952
+Czech Republic,Europe,2014,4.426008096
+Czech Republic,Europe,2015,4.796041114
+Czech Republic,Europe,2016,5.083934971
+Czech Republic,Europe,2017,5.57945263
+Czech Republic,Europe,2018,6.05790581
+Czech Republic,Europe,2019,6.517801463
+Czech Republic,Europe,2020,6.809473996
+Czech Republic,Europe,2021,6.798042423
+Czech Republic,Europe,2022,6.291241815
+Estonia,Europe,2000,1.864276492
+Estonia,Europe,2001,2.008680746
+Estonia,Europe,2002,2.259202634
+Estonia,Europe,2003,2.626463337
+Estonia,Europe,2004,2.884658808
+Estonia,Europe,2005,3.018371075
+Estonia,Europe,2006,3.235478665
+Estonia,Europe,2007,3.666016295
+Estonia,Europe,2008,4.171562205
+Estonia,Europe,2009,4.174835623
+Estonia,Europe,2010,4.054338844
+Estonia,Europe,2011,3.71175418
+Estonia,Europe,2012,3.715784118
+Estonia,Europe,2013,3.816107168
+Estonia,Europe,2014,4.282604044
+Estonia,Europe,2015,4.728110329
+Estonia,Europe,2016,5.124602812
+Estonia,Europe,2017,5.423484029
+Estonia,Europe,2018,5.601662371
+Estonia,Europe,2019,5.919519156
+Estonia,Europe,2020,6.446077455
+Estonia,Europe,2021,6.159467177
+Estonia,Europe,2022,5.722070441
+Luxembourg,Europe,2000,11.29916192
+Luxembourg,Europe,2001,11.69976895
+Luxembourg,Europe,2002,11.6628535
+Luxembourg,Europe,2003,12.09462251
+Luxembourg,Europe,2004,12.08302533
+Luxembourg,Europe,2005,12.32431648
+Luxembourg,Europe,2006,12.25755899
+Luxembourg,Europe,2007,12.48944571
+Luxembourg,Europe,2008,12.31799063
+Luxembourg,Europe,2009,12.84272573
+Luxembourg,Europe,2010,12.76455803
+Luxembourg,Europe,2011,12.80722499
+Luxembourg,Europe,2012,12.79240336
+Luxembourg,Europe,2013,12.74233707
+Luxembourg,Europe,2014,13.23507365
+Luxembourg,Europe,2015,13.19627223
+Luxembourg,Europe,2016,13.15800436
+Luxembourg,Europe,2017,13.43429143
+Luxembourg,Europe,2018,13.36955557
+Luxembourg,Europe,2019,13.60213687
+Luxembourg,Europe,2020,13.82656634
+Luxembourg,Europe,2021,13.95419911
+Luxembourg,Europe,2022,13.56323911
+Hungary,Europe,2000,2.064825417
+Hungary,Europe,2001,2.968854259
+Hungary,Europe,2002,3.525742827
+Hungary,Europe,2003,3.36872594
+Hungary,Europe,2004,3.344863822
+Hungary,Europe,2005,3.473494229
+Hungary,Europe,2006,3.664882452
+Hungary,Europe,2007,3.557343974
+Hungary,Europe,2008,3.534605587
+Hungary,Europe,2009,3.514255956
+Hungary,Europe,2010,3.445632856
+Hungary,Europe,2011,3.518306737
+Hungary,Europe,2012,3.969946581
+Hungary,Europe,2013,4.11220714
+Hungary,Europe,2014,4.268630011
+Hungary,Europe,2015,4.399459179
+Hungary,Europe,2016,4.636092856
+Hungary,Europe,2017,5.141484777
+Hungary,Europe,2018,5.404269369
+Hungary,Europe,2019,5.715889701
+Hungary,Europe,2020,5.977247799
+Hungary,Europe,2021,5.819253834
+Hungary,Europe,2022,6.16204138
+United Kingdom,Europe,2000,7.521038455
+United Kingdom,Europe,2001,7.746615728
+United Kingdom,Europe,2002,8.297006231
+United Kingdom,Europe,2003,8.486246629
+United Kingdom,Europe,2004,8.972228649
+United Kingdom,Europe,2005,9.385184652
+United Kingdom,Europe,2006,9.5842957
+United Kingdom,Europe,2007,9.840360474
+United Kingdom,Europe,2008,9.826869155
+United Kingdom,Europe,2009,9.948239077
+United Kingdom,Europe,2010,9.840360474
+United Kingdom,Europe,2011,9.699865817
+United Kingdom,Europe,2012,9.679150023
+United Kingdom,Europe,2013,9.632657994
+United Kingdom,Europe,2014,9.711023863
+United Kingdom,Europe,2015,9.961128535
+United Kingdom,Europe,2016,10.84122522
+United Kingdom,Europe,2017,10.90677371
+United Kingdom,Europe,2018,11.11893218
+United Kingdom,Europe,2019,11.45524844
+United Kingdom,Europe,2020,11.99589148
+United Kingdom,Europe,2021,12.07359966
+United Kingdom,Europe,2022,11.80026629
+Netherlands,Europe,2000,12.31313689
+Netherlands,Europe,2001,12.53138655
+Netherlands,Europe,2002,12.66983247
+Netherlands,Europe,2003,12.796026
+Netherlands,Europe,2004,12.71475883
+Netherlands,Europe,2005,12.50368043
+Netherlands,Europe,2006,12.50239181
+Netherlands,Europe,2007,12.59539899
+Netherlands,Europe,2008,12.63628217
+Netherlands,Europe,2009,12.89691116
+Netherlands,Europe,2010,12.93515889
+Netherlands,Europe,2011,12.72879072
+Netherlands,Europe,2012,12.68236581
+Netherlands,Europe,2013,12.52564501
+Netherlands,Europe,2014,12.58185257
+Netherlands,Europe,2015,12.60244463
+Netherlands,Europe,2016,12.80608641
+Netherlands,Europe,2017,12.85931621
+Netherlands,Europe,2018,12.86784273
+Netherlands,Europe,2019,12.85066502
+Netherlands,Europe,2020,13.01000094
+Netherlands,Europe,2021,12.86937286
+Netherlands,Europe,2022,12.02894679
+Canada,North America,2000,8.06469878
+Canada,North America,2001,7.972209926
+Canada,North America,2002,7.888404323
+Canada,North America,2003,7.777647786
+Canada,North America,2004,7.790089861
+Canada,North America,2005,7.858544218
+Canada,North America,2006,8.031919919
+Canada,North America,2007,8.112091822
+Canada,North America,2008,8.439746829
+Canada,North America,2009,8.938567809
+Canada,North America,2010,9.257779507
+Canada,North America,2011,9.28444498
+Canada,North America,2012,9.45858246
+Canada,North America,2013,9.520889327
+Canada,North America,2014,9.582314839
+Canada,North America,2015,9.730805194
+Canada,North America,2016,9.881186504
+Canada,North America,2017,10.05301863
+Canada,North America,2018,11.10960017
+Canada,North America,2019,11.2957588
+Canada,North America,2020,11.50162238
+Canada,North America,2021,11.3845332
+Canada,North America,2022,11.12450525
+Turkey,Asia,2000,3.489193155
+Turkey,Asia,2001,3.009075857
+Turkey,Asia,2002,3.224686364
+Turkey,Asia,2003,3.432018193
+Turkey,Asia,2004,4.477849718
+Turkey,Asia,2005,4.665562526
+Turkey,Asia,2006,4.625477474
+Turkey,Asia,2007,4.595479142
+Turkey,Asia,2008,4.522064496
+Turkey,Asia,2009,4.637906607
+Turkey,Asia,2010,4.68217278
+Turkey,Asia,2011,4.822709981
+Turkey,Asia,2012,4.953547081
+Turkey,Asia,2013,5.044857565
+Turkey,Asia,2014,5.109273082
+Turkey,Asia,2015,5.32632385
+Turkey,Asia,2016,6.577447468
+Turkey,Asia,2017,6.386841818
+Turkey,Asia,2018,6.268515152
+Turkey,Asia,2019,6.860866695
+Turkey,Asia,2020,7.029143758
+Turkey,Asia,2021,7.144525032
+Turkey,Asia,2022,8.81243087
+Mexico,North America,2000,0.98521787
+Mexico,North America,2001,0.990852592
+Mexico,North America,2002,0.997882308
+Mexico,North America,2003,0.997475507
+Mexico,North America,2004,0.993343657
+Mexico,North America,2005,0.998137641
+Mexico,North America,2006,1.00169295
+Mexico,North America,2007,1.000947507
+Mexico,North America,2008,0.990329495
+Mexico,North America,2009,0.983980952
+Mexico,North America,2010,0.990535438
+Mexico,North America,2011,0.997228936
+Mexico,North America,2012,0.998793861
+Mexico,North America,2013,1.003141052
+Mexico,North America,2014,1.001971456
+Mexico,North America,2015,1.022330966
+Mexico,North America,2016,1.056579468
+Mexico,North America,2017,1.091874695
+Mexico,North America,2018,1.149075665
+Mexico,North America,2019,1.288452167
+Mexico,North America,2020,1.495396649
+Mexico,North America,2021,1.627100594
+Mexico,North America,2022,1.839745414
+Slovakia,Europe,2000,2.353583459
+Slovakia,Europe,2001,2.421959543
+Slovakia,Europe,2002,2.634148848
+Slovakia,Europe,2003,2.889034148
+Slovakia,Europe,2004,2.916089018
+Slovakia,Europe,2005,3.029253652
+Slovakia,Europe,2006,3.108827807
+Slovakia,Europe,2007,3.3033161
+Slovakia,Europe,2008,3.310221136
+Slovakia,Europe,2009,3.58020538
+Slovakia,Europe,2010,3.692461713
+Slovakia,Europe,2011,3.661726969
+Slovakia,Europe,2012,3.646784483
+Slovakia,Europe,2013,3.713109874
+Slovakia,Europe,2014,3.872924723
+Slovakia,Europe,2015,4.187110091
+Slovakia,Europe,2016,4.498607212
+Slovakia,Europe,2017,4.764326389
+Slovakia,Europe,2018,5.130825476
+Slovakia,Europe,2019,5.341701562
+Slovakia,Europe,2020,5.91521099
+Slovakia,Europe,2021,6.165118925
+Slovakia,Europe,2022,5.665298444
+Israel,Asia,2000,5.389857768
+Israel,Asia,2001,5.816617561
+Israel,Asia,2002,5.627371064
+Israel,Asia,2003,5.705845058
+Israel,Asia,2004,5.72770414
+Israel,Asia,2005,5.653446956
+Israel,Asia,2006,5.817183757
+Israel,Asia,2007,6.082980902
+Israel,Asia,2008,5.979908435
+Israel,Asia,2009,5.891027619
+Israel,Asia,2010,5.73663358
+Israel,Asia,2011,5.73894081
+Israel,Asia,2012,5.875935143
+Israel,Asia,2013,5.99513143
+Israel,Asia,2014,5.96650493
+Israel,Asia,2015,6.368673409
+Israel,Asia,2016,6.649398589
+Israel,Asia,2017,6.999346928
+Israel,Asia,2018,7.362717025
+Israel,Asia,2019,7.300677103
+Israel,Asia,2020,7.345810672
+Israel,Asia,2021,7.233985511
+Israel,Asia,2022,7.02925288
+Ireland,Europe,2000,8.008573364
+Ireland,Europe,2001,7.896013664
+Ireland,Europe,2002,7.9263983
+Ireland,Europe,2003,8.012360552
+Ireland,Europe,2004,8.580690672
+Ireland,Europe,2005,8.955717561
+Ireland,Europe,2006,8.872075525
+Ireland,Europe,2007,9.37553589
+Ireland,Europe,2008,9.190333293
+Ireland,Europe,2009,9.621179666
+Ireland,Europe,2010,9.710721827
+Ireland,Europe,2011,9.468592048
+Ireland,Europe,2012,9.310663735
+Ireland,Europe,2013,9.263538736
+Ireland,Europe,2014,9.246659669
+Ireland,Europe,2015,9.273541726
+Ireland,Europe,2016,9.808769851
+Ireland,Europe,2017,9.882317113
+Ireland,Europe,2018,10.1532393
+Ireland,Europe,2019,10.32210178
+Ireland,Europe,2020,10.67379737
+Ireland,Europe,2021,10.53113922
+Ireland,Europe,2022,10.05578567
+Australia,Oceania,2000,12.09320908
+Australia,Oceania,2001,11.9840661
+Australia,Oceania,2002,12.10076074
+Australia,Oceania,2003,12.25791055
+Australia,Oceania,2004,12.47506513
+Australia,Oceania,2005,12.57486217
+Australia,Oceania,2006,12.3843223
+Australia,Oceania,2007,12.79230909
+Australia,Oceania,2008,12.56683897
+Australia,Oceania,2009,12.73068217
+Australia,Oceania,2010,12.67223563
+Australia,Oceania,2011,12.76901199
+Australia,Oceania,2012,12.9425105
+Australia,Oceania,2013,12.97813619
+Australia,Oceania,2014,13.01549339
+Australia,Oceania,2015,13.1769726
+Australia,Oceania,2016,13.33076387
+Australia,Oceania,2017,13.44955837
+Australia,Oceania,2018,13.64454696
+Australia,Oceania,2019,13.8611856
+Australia,Oceania,2020,14.0739109
+Australia,Oceania,2021,13.97421252
+Australia,Oceania,2022,13.6122074
+Greece,Europe,2000,6.274635431
+Greece,Europe,2001,6.272566568
+Greece,Europe,2002,6.375092216
+Greece,Europe,2003,6.47168335
+Greece,Europe,2004,6.61071862
+Greece,Europe,2005,6.739075613
+Greece,Europe,2006,6.934725748
+Greece,Europe,2007,7.100664601
+Greece,Europe,2008,7.242021159
+Greece,Europe,2009,7.565515396
+Greece,Europe,2010,7.351834867
+Greece,Europe,2011,7.173059841
+Greece,Europe,2012,5.743088808
+Greece,Europe,2013,5.605914834
+Greece,Europe,2014,5.68045619
+Greece,Europe,2015,5.780805326
+Greece,Europe,2016,5.828932349
+Greece,Europe,2017,5.764299619
+Greece,Europe,2018,5.728461191
+Greece,Europe,2019,6.285842206
+Greece,Europe,2020,6.418323081
+Greece,Europe,2021,6.340723678
+Greece,Europe,2022,6.2
+Belgium,Europe,2000,12.52303401
+Belgium,Europe,2001,12.59149938
+Belgium,Europe,2002,12.75962232
+Belgium,Europe,2003,12.68640414
+Belgium,Europe,2004,12.54850299
+Belgium,Europe,2005,12.45283092
+Belgium,Europe,2006,12.47635184
+Belgium,Europe,2007,12.62036385
+Belgium,Europe,2008,12.56942063
+Belgium,Europe,2009,13.19221645
+Belgium,Europe,2010,12.90958696
+Belgium,Europe,2011,12.84571213
+Belgium,Europe,2012,12.74093455
+Belgium,Europe,2013,12.97921578
+Belgium,Europe,2014,12.93523562
+Belgium,Europe,2015,12.86301888
+Belgium,Europe,2016,12.74086549
+Belgium,Europe,2017,12.72565974
+Belgium,Europe,2018,12.59293968
+Belgium,Europe,2019,12.66244295
+Belgium,Europe,2020,12.69551264
+Belgium,Europe,2021,12.59941099
+Belgium,Europe,2022,12.65368911
+Portugal,Europe,2000,5.12413669
+Portugal,Europe,2001,5.155819012
+Portugal,Europe,2002,5.182401893
+Portugal,Europe,2003,5.144692225
+Portugal,Europe,2004,5.14565122
+Portugal,Europe,2005,5.163373351
+Portugal,Europe,2006,5.15472266
+Portugal,Europe,2007,5.257003131
+Portugal,Europe,2008,5.416777564
+Portugal,Europe,2009,5.770159546
+Portugal,Europe,2010,6.006514852
+Portugal,Europe,2011,5.916755064
+Portugal,Europe,2012,5.757091428
+Portugal,Europe,2013,5.741336245
+Portugal,Europe,2014,5.757350509
+Portugal,Europe,2015,5.96572717
+Portugal,Europe,2016,6.22319154
+Portugal,Europe,2017,6.451921848
+Portugal,Europe,2018,6.652301325
+Portugal,Europe,2019,6.858463284
+Portugal,Europe,2020,7.259116628
+Portugal,Europe,2021,7.507358993
+Portugal,Europe,2022,7.380844865
+United States,North America,2000,8.752455406
+United States,North America,2001,8.511894696
+United States,North America,2002,8.379001089
+United States,North America,2003,8.193011937
+United States,North America,2004,7.979384916
+United States,North America,2005,7.717548048
+United States,North America,2006,7.476364702
+United States,North America,2007,7.706555517
+United States,North America,2008,8.37312287
+United States,North America,2009,9.357885718
+United States,North America,2010,9.730312447
+United States,North America,2011,9.432542039
+United States,North America,2012,9.241308205
+United States,North America,2013,9.107892816
+United States,North America,2014,8.962501065
+United States,North America,2015,8.951881704
+United States,North America,2016,8.840353292
+United States,North America,2017,8.655971575
+United States,North America,2018,8.449583461
+United States,North America,2019,8.299184798
+United States,North America,2020,8.198054872
+United States,North America,2021,7.830202987
+United States,North America,2022,7.25
+Germany,Europe,2015,12.71169122
+Germany,Europe,2016,12.64948754
+Germany,Europe,2017,12.95983872
+Germany,Europe,2018,12.73917485
+Germany,Europe,2019,13.05482465
+Germany,Europe,2020,13.2628981
+Germany,Europe,2021,13.08847683
+Germany,Europe,2022,13.55
+Brazil,South America,2000,1.060235732
+Brazil,South America,2001,1.164206046
+Brazil,South America,2002,1.211758825
+Brazil,South America,2003,1.245918144
+Brazil,South America,2004,1.287384498
+Brazil,South America,2005,1.363136057
+Brazil,South America,2006,1.540410814
+Brazil,South America,2007,1.640424777
+Brazil,South America,2008,1.705074122
+Brazil,South America,2009,1.830884524
+Brazil,South America,2010,1.92902473
+Brazil,South America,2011,1.930162516
+Brazil,South America,2012,2.093135281
+Brazil,South America,2013,2.148297696
+Brazil,South America,2014,2.157503166
+Brazil,South America,2015,2.153740997
+Brazil,South America,2016,2.211892529
+Brazil,South America,2017,2.276699283
+Brazil,South America,2018,2.236057308
+Brazil,South America,2019,2.255008888
+Brazil,South America,2020,2.287730117
+Brazil,South America,2021,2.223545761
+Brazil,South America,2022,2.449943148
+Russia,Europe,2000,0.171980884
+Russia,Europe,2001,0.268134175
+Russia,Europe,2002,0.370515058
+Russia,Europe,2003,0.397283256
+Russia,Europe,2004,0.440950597
+Russia,Europe,2005,0.482617553
+Russia,Europe,2006,0.654156348
+Russia,Europe,2007,1.254761385
+Russia,Europe,2008,1.099599451
+Russia,Europe,2009,1.854155851
+Russia,Europe,2010,1.735298455
+Russia,Europe,2011,1.660811053
+Russia,Europe,2012,1.621779169
+Russia,Europe,2013,1.714882323
+Russia,Europe,2014,1.697095882
+Russia,Europe,2015,1.57734549
+Russia,Europe,2016,1.532868856
+Russia,Europe,2017,1.822995897
+Russia,Europe,2018,2.45646809
+Russia,Europe,2019,2.501015783
+Russia,Europe,2020,2.601504797
+Russia,Europe,2021,2.571345457
+Lithuania,Europe,2000,2.646049598
+Lithuania,Europe,2001,2.610362798
+Lithuania,Europe,2002,2.603035082
+Lithuania,Europe,2003,2.684933898
+Lithuania,Europe,2004,2.942073323
+Lithuania,Europe,2005,3.126419155
+Lithuania,Europe,2006,3.361470413
+Lithuania,Europe,2007,3.590169071
+Lithuania,Europe,2008,3.994212667
+Lithuania,Europe,2009,3.823931302
+Lithuania,Europe,2010,3.774142302
+Lithuania,Europe,2011,3.624442824
+Lithuania,Europe,2012,3.610043127
+Lithuania,Europe,2013,3.694577593
+Lithuania,Europe,2014,3.891410181
+Lithuania,Europe,2015,4.858845772
+Lithuania,Europe,2016,5.504911742
+Lithuania,Europe,2017,5.533930836
+Lithuania,Europe,2018,5.690496306
+Lithuania,Europe,2019,7.6941677
+Lithuania,Europe,2020,7.60294044
+Lithuania,Europe,2021,8.419688466
+Lithuania,Europe,2022,8.000157498
+Latvia,Europe,2000,1.645587602
+Latvia,Europe,2001,1.766219706
+Latvia,Europe,2002,1.890137646
+Latvia,Europe,2003,2.142125474
+Latvia,Europe,2004,2.305385095
+Latvia,Europe,2005,2.159642657
+Latvia,Europe,2006,2.280537517
+Latvia,Europe,2007,2.761953356
+Latvia,Europe,2008,3.191100927
+Latvia,Europe,2009,3.467445324
+Latvia,Europe,2010,3.505466878
+Latvia,Europe,2011,3.731853738
+Latvia,Europe,2012,3.649456697
+Latvia,Europe,2013,3.650531953
+Latvia,Europe,2014,4.087910271
+Latvia,Europe,2015,4.590899807
+Latvia,Europe,2016,4.71179856
+Latvia,Europe,2017,4.701376779
+Latvia,Europe,2018,5.188479071
+Latvia,Europe,2019,5.046598858
+Latvia,Europe,2020,5.035567889
+Latvia,Europe,2021,5.669586389
+Latvia,Europe,2022,4.832983038
+Colombia,North America,2000,2.193349246
+Colombia,North America,2001,2.233820241
+Colombia,North America,2002,2.269326668
+Colombia,North America,2003,2.275969174
+Colombia,North America,2004,2.317388593
+Colombia,North America,2005,2.35076991
+Colombia,North America,2006,2.410564797
+Colombia,North America,2007,2.427800161
+Colombia,North America,2008,2.414482682
+Colombia,North America,2009,2.494842716
+Colombia,North America,2010,2.52827694
+Colombia,North America,2011,2.542578162
+Colombia,North America,2012,2.60757292
+Colombia,North America,2013,2.658854304
+Colombia,North America,2014,2.700106983
+Colombia,North America,2015,2.690139888
+Colombia,North America,2016,2.677290431
+Colombia,North America,2017,2.746224762
+Colombia,North America,2018,2.816965179
+Colombia,North America,2019,2.884364479
+Colombia,North America,2020,2.982080643
+Colombia,North America,2021,2.982222278
+Colombia,North America,2022,2.979276188
+Costa Rica,North America,2000,3.045705814
+Costa Rica,North America,2001,3.100469819
+Costa Rica,North America,2002,3.061763061
+Costa Rica,North America,2003,3.08439728
+Costa Rica,North America,2004,3.049014878
+Costa Rica,North America,2005,3.071868378
+Costa Rica,North America,2006,3.105167208
+Costa Rica,North America,2007,3.132508399
+Costa Rica,North America,2008,3.195688177
+Costa Rica,North America,2009,3.234331053
+Costa Rica,North America,2010,3.349157734
+Costa Rica,North America,2011,3.392069637
+Costa Rica,North America,2012,3.44950969
+Costa Rica,North America,2013,3.479224876
+Costa Rica,North America,2014,3.464370601
+Costa Rica,North America,2015,3.671015995
+Costa Rica,North America,2016,3.774662179
+Costa Rica,North America,2017,3.714278291
+Costa Rica,North America,2018,3.721866209
+Costa Rica,North America,2019,3.743069402
+Costa Rica,North America,2020,3.809932827
+Costa Rica,North America,2021,4.312179631
+Costa Rica,North America,2022,4.065868631
