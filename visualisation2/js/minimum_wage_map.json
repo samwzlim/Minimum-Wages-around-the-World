@@ -1,86 +1,195 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Minimum Wage per day in local currency for each country in 2023",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
   "width": 800,
   "height": 400,
-  "projection": {"type": "equalEarth"},
-  "data": {
-    "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/week9_homework/js/ne_110m.topojson",
-    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  "title": {
+    "text": "Minimum Wage per hour in USD for each country in 2023",
+    "frame": "group"
   },
-  "layer": [
+  "style": "view",
+  "data": [
     {
+      "name": "source_1",
+      "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+      "format": {"type": "topojson", "feature": "oceans"}
+    },
+    {
+      "name": "source_2",
+      "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
+      "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+    },
+    {
+      "name": "source_3",
+      "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/visualisation2/data/world-data-2023.csv",
+      "format": {"type": "csv", "delimiter": ","}
+    },
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/visualisation2/js/ne_110m.topojson",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_admin_0_countries",
+        "parse": {}
+      },
       "transform": [
         {
-          "calculate": "'No specified minimum wage in ' + datum.properties.NAME",
+          "type": "formula",
+          "expr": "datum[\"properties\"] && datum[\"properties\"][\"NAME\"]",
+          "as": "properties.NAME"
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "'No specified minimum wage in ' + datum.properties.NAME",
           "as": "outlier"
         }
-      ],
-      "mark": {
-        "type": "geoshape",
-        "fill": "lightgrey",
-        "stroke": "grey",
-        "strokeWidth": 1
-      },
-      "encoding": {"tooltip": {"field": "outlier"}}
+      ]
     },
     {
-      "data": {
-        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
-        "format": {"type": "topojson", "feature": "oceans"}
-      },
-      "mark": {"type": "geoshape", "fill": "skyblue"}
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
-        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
-      },
-      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
-    },
-    {
+      "name": "data_1",
+      "source": "source_0",
       "transform": [
         {
-          "lookup": "properties.NAME",
-          "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/week9_homework/data/world-data-2023.csv"
-            },
-            "key": "Country",
-            "fields": ["Minimum wage"]
-          }
-        }
-      ],
-      "mark": {"type": "geoshape", "stroke": "grey", "strokeWidth": 1},
-      "encoding": {
-        "color": {
-          "field": "Minimum wage",
-          "type": "quantitative",
-          "title": "Minimum Wage ($)",
-          "scale": {
-            "type": "linear",
-            "domain": [0, 2, 4, 6, 8, 10, 12, 14],
-            "range": [
-              "#ffffff",
-              "#ffcc99",
-              "#ff9966",
-              "#ff6633",
-              "#ff3300",
-              "#ff0000",
-              "#cc0000",
-              "#990000"
-            ]
-          }
+          "type": "lookup",
+          "from": "source_3",
+          "key": "Country",
+          "fields": ["properties.NAME"],
+          "values": ["Minimum_wage"]
         },
-        "tooltip": [
-          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-          {
-            "field": "Minimum wage",
-            "type": "quantitative",
-            "title": "Minimum Wage ($)"
-          }
-        ]
+        {"type": "filter", "expr": "datum.Minimum_wage > Wage_Above"},
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Minimum_wage\"]) && isFinite(+datum[\"Minimum_wage\"])"
+        }
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "name": "projection",
+      "size": {"signal": "[width, height]"},
+      "fit": {
+        "signal": "[data('data_0'), data('source_1'), data('source_2'), data('data_1')]"
+      },
+      "type": "equalEarth"
+    }
+  ],
+  "signals": [
+    {
+      "name": "Wage_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 14,
+        "step": 0.5,
+        "name": "Minimum Wage: "
       }
     }
-  ]
+  ],
+  "marks": [
+    {
+      "name": "layer_0_marks",
+      "type": "shape",
+      "style": ["geoshape"],
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "fill": {"value": "lightgrey"},
+          "stroke": {"value": "grey"},
+          "strokeWidth": {"value": 1},
+          "tooltip": {
+            "signal": "isValid(datum[\"outlier\"]) ? datum[\"outlier\"] : \"\"+datum[\"outlier\"]"
+          },
+          "ariaRoleDescription": {"value": "geoshape"},
+          "description": {
+            "signal": "\"outlier: \" + (isValid(datum[\"outlier\"]) ? datum[\"outlier\"] : \"\"+datum[\"outlier\"])"
+          }
+        }
+      },
+      "transform": [{"type": "geoshape", "projection": "projection"}]
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "shape",
+      "style": ["geoshape"],
+      "from": {"data": "source_1"},
+      "encode": {
+        "update": {
+          "fill": {"value": "skyblue"},
+          "ariaRoleDescription": {"value": "geoshape"}
+        }
+      },
+      "transform": [{"type": "geoshape", "projection": "projection"}]
+    },
+    {
+      "name": "layer_2_marks",
+      "type": "shape",
+      "style": ["geoshape"],
+      "from": {"data": "source_2"},
+      "encode": {
+        "update": {
+          "fill": {"value": null},
+          "stroke": {"value": "lightgray"},
+          "ariaRoleDescription": {"value": "geoshape"}
+        }
+      },
+      "transform": [{"type": "geoshape", "projection": "projection"}]
+    },
+    {
+      "name": "layer_3_marks",
+      "type": "shape",
+      "style": ["geoshape"],
+      "from": {"data": "data_1"},
+      "encode": {
+        "update": {
+          "stroke": {"value": "grey"},
+          "strokeWidth": {"value": 1},
+          "fill": {"scale": "color", "field": "Minimum_wage"},
+          "tooltip": {
+            "signal": "{\"Country\": isValid(datum[\"properties.NAME\"]) ? datum[\"properties.NAME\"] : \"\"+datum[\"properties.NAME\"], \"Minimum Wage (USD)\": format(datum[\"Minimum_wage\"], \"\")}"
+          },
+          "ariaRoleDescription": {"value": "geoshape"},
+          "description": {
+            "signal": "\"Minimum Wage (USD): \" + (format(datum[\"Minimum_wage\"], \"\")) + \"; Country: \" + (isValid(datum[\"properties.NAME\"]) ? datum[\"properties.NAME\"] : \"\"+datum[\"properties.NAME\"])"
+          }
+        }
+      },
+      "transform": [{"type": "geoshape", "projection": "projection"}]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "linear",
+      "domain": [0, 2, 4, 6, 8, 10, 12, 14],
+      "range": [
+        "#ffffff",
+        "#ffcc99",
+        "#ff9966",
+        "#ff6633",
+        "#ff3300",
+        "#ff0000",
+        "#cc0000",
+        "#990000"
+      ],
+      "interpolate": "hcl",
+      "zero": true
+    }
+  ],
+  "legends": [
+    {
+      "title": "Minimum Wage (USD)",
+      "fill": "color",
+      "gradientLength": {"signal": "clamp(height, 64, 200)"}
+    }
+  ],
+  "config": {}
 }
