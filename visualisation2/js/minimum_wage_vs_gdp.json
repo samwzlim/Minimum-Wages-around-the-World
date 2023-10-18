@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": 600,
   "height": 600,
   "title": "Minimum Wage vs. GDP per Country",
   "data": {
-    "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/week10_homework/data/world-data-2023.csv"
+    "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/visualisation2/data/world-data-2023.csv"
   },
   "params": [
     {
@@ -31,6 +31,17 @@
         ],
         "name": "Select Continent: "
       }
+    },
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population: "
+      }
     }
   ],
   "transform": [
@@ -40,26 +51,32 @@
     {
       "filter": "Continent_selection == null || datum.Continent == Continent_selection"
     },
-    {"calculate": "datum.GDP / 1e12", "as": "GDP trillion"}
+    {"calculate": "datum.GDP / 1e12", "as": "GDP trillion"},
+    {"filter": "datum.Population > Population_Above"}
   ],
   "encoding": {
     "x": {
       "field": "GDP trillion",
       "type": "quantitative",
-      "title": "GDP (in trillions)",
+      "title": "GDP (USD in trillions)",
       "axis": {"tickCount": 5},
-      "scale": {"type": "log"}
+      "scale": {"type": "log", "domain": [0.0001, 100]}
     },
     "y": {
       "field": "Minimum_wage",
       "type": "quantitative",
-      "title": "Minimum Wage (in local currency)",
+      "title": "Minimum Wage (USD)",
       "axis": {"tickCount": 3},
       "scale": {"type": "log", "domain": [0.01, 20]}
     }
   },
   "layer": [
     {
+      "params": [{
+        "name": "grid",
+        "select": "interval",
+        "bind": "scales"
+      }],
       "mark": "circle",
       "encoding": {
         "size": {
@@ -101,12 +118,12 @@
             "field": "GDP trillion",
             "type": "quantitative",
             "format": ".2f",
-            "title": "GDP (in trillions)"
+            "title": "GDP (USD in trillions)"
           },
           {
             "field": "Minimum_wage",
             "type": "quantitative",
-            "title": "Minimum Wage (in local currency)"
+            "title": "Minimum Wage (USD)"
           }
         ]
       }
@@ -136,12 +153,12 @@
             "field": "GDP trillion",
             "type": "quantitative",
             "format": ".2f",
-            "title": "GDP (in trillions)"
+            "title": "GDP (USD in trillions)"
           },
           {
             "field": "Minimum_wage",
             "type": "quantitative",
-            "title": "Minimum Wage (in local currency)"
+            "title": "Minimum Wage (USD)"
           }
         ]
       }

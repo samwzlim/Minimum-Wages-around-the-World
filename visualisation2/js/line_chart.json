@@ -1,214 +1,121 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "background": "white",
-  "padding": 5,
-  "width": 800,
-  "height": 600,
-  "title": {"text": "Minimum Wage Over Time by Country", "frame": "group"},
-  "style": "cell",
-  "data": [
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/visualisation2/data/minimum_wage_over_years.csv"},
+  "transform": [
     {
-      "name": "source_0",
-      "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/visualisation2/data/minimum_wage_over_years.csv",
-      "format": {"type": "csv", "parse": {"Year": "date"}, "delimiter": ","},
-      "transform": [
-        {
-          "field": "Year",
-          "type": "timeunit",
-          "units": ["year"],
-          "as": ["Year", "Year_end"]
-        },
-        {
-          "field": "Year",
-          "type": "timeunit",
-          "units": ["year"],
-          "as": ["year_Year", "year_Year_end"]
-        }
-      ]
-    },
-    {
-      "name": "data_0",
-      "source": "source_0",
-      "transform": [
-        {
-          "type": "filter",
-          "expr": "(isDate(datum[\"year_Year\"]) || (isValid(datum[\"year_Year\"]) && isFinite(+datum[\"year_Year\"]))) && isValid(datum[\"Wage\"]) && isFinite(+datum[\"Wage\"])"
-        }
-      ]
+      "filter": "Country_selection == null || datum.Country == Country_selection"
     }
   ],
-  "marks": [
+  "params": [
     {
-      "name": "layer_0_pathgroup",
-      "type": "group",
-      "from": {
-        "facet": {
-          "name": "faceted_path_layer_0_main",
-          "data": "source_0",
-          "groupby": ["Country"]
-        }
-      },
-      "encode": {
-        "update": {
-          "width": {"field": {"group": "width"}},
-          "height": {"field": {"group": "height"}}
-        }
-      },
-      "marks": [
-        {
-          "name": "layer_0_marks",
-          "type": "line",
-          "style": ["line"],
-          "sort": {"field": "datum[\"year_Year\"]"},
-          "from": {"data": "faceted_path_layer_0_main"},
-          "encode": {
-            "update": {
-              "stroke": {"scale": "color", "field": "Country"},
-              "opacity": {"value": 0.7},
-              "tooltip": {
-                "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"Year\": timeFormat(datum[\"year_Year\"], timeUnitSpecifier([\"year\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%b %d, %Y \"})), \"Minimum Wage\": format(datum[\"Wage\"], \"\")}"
-              },
-              "description": {
-                "signal": "\"Year: \" + (timeFormat(datum[\"year_Year\"], timeUnitSpecifier([\"year\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%b %d, %Y \"}))) + \"; Minimum Wage: \" + (format(datum[\"Wage\"], \"\")) + \"; Country: \" + (isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"])"
-              },
-              "x": {"scale": "x", "field": "year_Year"},
-              "y": {"scale": "y", "field": "Wage"},
-              "defined": {
-                "signal": "isValid(datum[\"year_Year\"]) && isFinite(+datum[\"year_Year\"]) && isValid(datum[\"Wage\"]) && isFinite(+datum[\"Wage\"])"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "layer_1_marks",
-      "type": "symbol",
-      "style": ["circle"],
-      "from": {"data": "data_0"},
-      "encode": {
-        "update": {
-          "opacity": {"value": 1},
-          "fill": {"scale": "color", "field": "Country"},
-          "tooltip": {
-            "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"Year\": timeFormat(datum[\"year_Year\"], timeUnitSpecifier([\"year\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%b %d, %Y \"})), \"Minimum Wage\": format(datum[\"Wage\"], \"\")}"
-          },
-          "ariaRoleDescription": {"value": "circle"},
-          "description": {
-            "signal": "\"Year: \" + (timeFormat(datum[\"year_Year\"], timeUnitSpecifier([\"year\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%b %d, %Y \"}))) + \"; Minimum Wage: \" + (format(datum[\"Wage\"], \"\")) + \"; Country: \" + (isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"])"
-          },
-          "x": {"scale": "x", "field": "year_Year"},
-          "y": {"scale": "y", "field": "Wage"},
-          "size": {"value": 50},
-          "shape": {"value": "circle"}
-        }
+      "name": "Country_selection",
+      "value": "Australia",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Australia",
+          "Belgium",
+          "Brazil",
+          "Canada",
+          "Chile",
+          "Colombia",
+          "Costa Rica",
+          "Czech Republic",
+          "Estonia",
+          "France",
+          "Germany",
+          "Greece",
+          "Hungary",
+          "Ireland",
+          "Israel",
+          "Japan",
+          "Latvia",
+          "Lithuania",
+          "Luxembourg",
+          "Mexico",
+          "Netherlands",
+          "New Zealand",
+          "Poland",
+          "Portugal",
+          "Russia",
+          "Slovakia",
+          "Slovenia",
+          "South Korea",
+          "Spain",
+          "Turkey",
+          "United Kingdom",
+          "United States"
+        ],
+        "labels": [
+          "Australia",
+          "Belgium",
+          "Brazil",
+          "Canada",
+          "Chile",
+          "Colombia",
+          "Costa Rica",
+          "Czech Republic",
+          "Estonia",
+          "France",
+          "Germany",
+          "Greece",
+          "Hungary",
+          "Ireland",
+          "Israel",
+          "Japan",
+          "Latvia",
+          "Lithuania",
+          "Luxembourg",
+          "Mexico",
+          "Netherlands",
+          "New Zealand",
+          "Poland",
+          "Portugal",
+          "Russia",
+          "Slovakia",
+          "Slovenia",
+          "South Korea",
+          "Spain",
+          "Turkey",
+          "United Kingdom",
+          "United States"
+        ],
+        "name": "Select Country: "
       }
     }
   ],
-  "scales": [
-    {
-      "name": "x",
-      "type": "time",
-      "domain": {
-        "fields": [
-          {"data": "source_0", "field": "year_Year"},
-          {"data": "data_0", "field": "year_Year"}
-        ]
+  "vconcat": [{
+    "width": 400,
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "scale": {"domain": {"param": "brush"}},
+        "axis": {"title": ""}
       },
-      "range": [0, {"signal": "width"}]
-    },
-    {
-      "name": "y",
-      "type": "linear",
-      "domain": {
-        "fields": [
-          {"data": "source_0", "field": "Wage"},
-          {"data": "data_0", "field": "Wage"}
-        ]
-      },
-      "range": [{"signal": "height"}, 0],
-      "nice": true,
-      "zero": true
-    },
-    {
-      "name": "color",
-      "type": "ordinal",
-      "domain": {
-        "fields": [
-          {"data": "source_0", "field": "Country"},
-          {"data": "data_0", "field": "Country"}
-        ],
-        "sort": true
-      },
-      "range": "category"
+      "y": {"field": "Wage", "type": "quantitative", "axis": {"title": "Minimum Wage (USD)"}},
+      "color": {"value": "#990000"}
     }
-  ],
-  "axes": [
-    {
-      "scale": "x",
-      "orient": "bottom",
-      "gridScale": "y",
-      "grid": true,
-      "tickCount": {"signal": "ceil(width/40)"},
-      "tickMinStep": {
-        "signal": "datetime(2002, 0, 1, 0, 0, 0, 0) - datetime(2001, 0, 1, 0, 0, 0, 0)"
+  }, {
+    "width": 400,
+    "height": 60,
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal"
       },
-      "domain": false,
-      "labels": false,
-      "aria": false,
-      "maxExtent": 0,
-      "minExtent": 0,
-      "ticks": false,
-      "zindex": 0
-    },
-    {
-      "scale": "y",
-      "orient": "left",
-      "gridScale": "x",
-      "grid": true,
-      "tickCount": {"signal": "ceil(height/40)"},
-      "domain": false,
-      "labels": false,
-      "aria": false,
-      "maxExtent": 0,
-      "minExtent": 0,
-      "ticks": false,
-      "zindex": 0
-    },
-    {
-      "scale": "x",
-      "orient": "bottom",
-      "grid": false,
-      "title": "Year",
-      "format": {
-        "signal": "timeUnitSpecifier([\"year\"], {\"year-month\":\"%b %Y \",\"year-month-date\":\"%b %d, %Y \"})"
+      "y": {
+        "field": "Wage",
+        "type": "quantitative",
+        "axis": {"tickCount": 3, "grid": false, "title": "Minimum Wage (USD)"}
       },
-      "labelFlush": true,
-      "labelOverlap": true,
-      "tickCount": {"signal": "ceil(width/40)"},
-      "tickMinStep": {
-        "signal": "datetime(2002, 0, 1, 0, 0, 0, 0) - datetime(2001, 0, 1, 0, 0, 0, 0)"
-      },
-      "zindex": 0
+      "color": {"value": "#990000"}
     },
-    {
-      "scale": "y",
-      "orient": "left",
-      "grid": false,
-      "title": "Minimum Wage",
-      "labelOverlap": true,
-      "tickCount": {"signal": "ceil(height/40)"},
-      "zindex": 0
-    }
-  ],
-  "legends": [
-    {
-      "title": "Country",
-      "stroke": "color",
-      "symbolType": "circle",
-      "encode": {"symbols": {"update": {"opacity": {"value": 0.7}}}},
-      "fill": "color"
-    }
-  ],
-  "config": {}
+    "params": [{
+      "name": "brush",
+      "select": {"type": "interval", "encodings": ["x"]}
+    }]
+  }]
 }

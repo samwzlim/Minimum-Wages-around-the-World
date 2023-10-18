@@ -1,126 +1,100 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "background": "white",
-  "padding": 5,
-  "width": 200,
-  "title": {
-    "text": "Number of working days required to buy iPhone 15 Pro in every country",
-    "frame": "group"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/visualisation2/data/daystobuyiphone.csv"
   },
-  "style": "cell",
-  "data": [
+  "hconcat": [
     {
-      "name": "source_0",
-      "url": "https://raw.githubusercontent.com/samwzlim/FIT3179/main/visualisation2/data/daystobuyiphone.csv",
-      "format": {"type": "csv", "delimiter": ","}
-    },
-    {
-      "name": "data_0",
-      "source": "source_0",
-      "transform": [
+      "layer": [
         {
-          "type": "stack",
-          "groupby": ["Country"],
-          "field": "Working_days",
-          "sort": {"field": [], "order": []},
-          "as": ["Working_days_start", "Working_days_end"],
-          "offset": "zero"
+          "mark": "bar",
+          "encoding": {
+            "color": {
+              "field": "Working_days",
+              "type": "quantitative",
+              "title": "Number of working days",
+              "scale": {
+                "range": [
+                  "#ffffff",
+                  "#ffcc99",
+                  "#ff9966",
+                  "#ff6633",
+                  "#ff3300",
+                  "#ff0000",
+                  "#cc0000",
+                  "#990000"
+                ]
+              },
+              "legend": null
+            }
+          }
         },
         {
-          "type": "filter",
-          "expr": "isValid(datum[\"Working_days\"]) && isFinite(+datum[\"Working_days\"])"
-        }
-      ]
-    }
-  ],
-  "signals": [
-    {"name": "y_step", "value": 20},
-    {
-      "name": "height",
-      "update": "bandspace(domain('y').length, 0.1, 0.05) * y_step"
-    }
-  ],
-  "marks": [
-    {
-      "name": "marks",
-      "type": "rect",
-      "style": ["bar"],
-      "from": {"data": "data_0"},
-      "encode": {
-        "update": {
-          "fill": {"value": "#4c78a8"},
-          "tooltip": {
-            "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"Price of iPhone 15 Pro (Local Currency)\": isValid(datum[\"iPhone_price_local_currency\"]) ? datum[\"iPhone_price_local_currency\"] : \"\"+datum[\"iPhone_price_local_currency\"], \"Average Monthly Wage (Local Currency)\": isValid(datum[\"Average_monthly_wage\"]) ? datum[\"Average_monthly_wage\"] : \"\"+datum[\"Average_monthly_wage\"]}"
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 3
           },
-          "ariaRoleDescription": {"value": "bar"},
-          "description": {
-            "signal": "\"Working Days to Purchase iPhone: \" + (format(datum[\"Working_days\"], \"\")) + \"; Country: \" + (isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"]) + \"; Price of iPhone 15 Pro (Local Currency): \" + (isValid(datum[\"iPhone_price_local_currency\"]) ? datum[\"iPhone_price_local_currency\"] : \"\"+datum[\"iPhone_price_local_currency\"]) + \"; Average Monthly Wage (Local Currency): \" + (isValid(datum[\"Average_monthly_wage\"]) ? datum[\"Average_monthly_wage\"] : \"\"+datum[\"Average_monthly_wage\"])"
-          },
-          "x": {"scale": "x", "field": "Working_days_end"},
-          "x2": {"scale": "x", "field": "Working_days_start"},
-          "y": {"scale": "y", "field": "Country"},
-          "height": {"signal": "max(0.25, bandwidth('y'))"}
+          "encoding": {
+            "text": {"field": "Working_days", "type": "quantitative"}
+          }
         }
+      ],
+      "transform": [
+        {"filter": {"param": "brush"}},
+        {
+          "calculate": " 'https://www.apple.com/' + datum.Country_code + '/shop/buy-iphone/iphone-15-pro'",
+          "as": "url"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "Working_days",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip":[
+            {"field": "iPhone_price_local_currency",
+            "type": "nominal",
+            "title": "Price in local currency:"}
+        ],
+        "href": {"field": "url", "type": "nominal"}
+      },
+      "width": 150, 
+      "height": 990
+    },
+    {
+      "height": 200,
+      "width": 50,
+      "params": [
+        {"name": "brush", "select": {"type": "interval", "encodings": ["y"]}}
+      ],
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "-x",
+          "axis": null
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "Working_days",
+          "type": "quantitative",
+          "axis": null
+        },
+        "color": {"value": "#990000"}
       }
     }
   ],
-  "scales": [
-    {
-      "name": "x",
-      "type": "linear",
-      "domain": {
-        "data": "data_0",
-        "fields": ["Working_days_start", "Working_days_end"]
-      },
-      "range": [0, {"signal": "width"}],
-      "nice": true,
-      "zero": true
-    },
-    {
-      "name": "y",
-      "type": "band",
-      "domain": {
-        "data": "source_0",
-        "field": "Country",
-        "sort": {"op": "sum", "field": "Working_days", "order": "descending"}
-      },
-      "range": {"step": {"signal": "y_step"}},
-      "paddingInner": 0.1,
-      "paddingOuter": 0.05
-    }
-  ],
-  "axes": [
-    {
-      "scale": "x",
-      "orient": "bottom",
-      "gridScale": "y",
-      "grid": true,
-      "tickCount": {"signal": "ceil(width/40)"},
-      "domain": false,
-      "labels": false,
-      "aria": false,
-      "maxExtent": 0,
-      "minExtent": 0,
-      "ticks": false,
-      "zindex": 0
-    },
-    {
-      "scale": "x",
-      "orient": "bottom",
-      "grid": false,
-      "title": "Working Days to Purchase iPhone",
-      "labelFlush": true,
-      "labelOverlap": true,
-      "tickCount": {"signal": "ceil(width/40)"},
-      "zindex": 0
-    },
-    {
-      "scale": "y",
-      "orient": "left",
-      "grid": false,
-      "title": "Country",
-      "zindex": 0
-    }
-  ],
-  "config": {}
+  "config": {"view": {"stroke": "transparent"}
+  }
 }
