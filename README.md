@@ -1,2 +1,2 @@
 Data Visualisation
-https://samwzlim.github.io/FIT3179/visualisation2/ 
+https://samwzlim.github.io/Minimum-Wages-around-the-World/visualisation2/
